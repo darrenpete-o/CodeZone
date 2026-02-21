@@ -1,0 +1,184 @@
+/*Resets default browser margin and padding on ALL elements*/
+/*It is the CSS reset*/
+* {
+  margin: 0; /*Space around elements pushes them away from eachother*/
+  padding: 0; /*for elements that come with internal spacing (setting it to 0 so we can start form scratch)*/
+  box-sizing: border-box; /*Widths and heights behave logically and predictably*/
+}
+
+/*For when sidebar is collaped*/
+body {
+  --sb-width: 5rem;
+  font-family: system-ui, sans-serif; /*Uses the systems default UI font (clean and modern)*/
+  /*Font size and spacing*/
+  font-size: 16px;
+  line-height: 1.7;
+  /*Font color and background color*/
+  color: black;
+  background-color: #fff;
+}
+/*increases the width when toggled in the body*/
+body.sb-expanded {
+  --sb-width: 12.5rem;
+}
+/*Styles the header h1*/
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/*Call to action link*/
+.CTA {
+  display: block;
+  text-decoration: none;
+  color: rgb(77, 44, 93);
+  text-align: center;
+  margin: 5rem auto;
+  font-size: 90px;
+  background: wheat;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  font-size: 5vw;
+}
+.CTA:hover {
+  font-size: 100px;
+  margin: 4rem 4rem;
+  transition: 0.5s ease-in-out;
+}
+/*Add spacing below paragraphs*/
+p {
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  font-weight: 200;
+}
+/*SIDEBAR*/
+aside {
+  position: fixed; /*Fixes the sidebar on the left of page even when scrolling*/
+  inset: 0 auto 0 0; /*Let the top, bottom and left of the side bar touch the border of the page (right is auto because we dont need it)*/
+  padding: 1rem; /*Increasing space from the element to border*/
+  width: var(
+    --sb-width
+  ); /*The width depends on if its toggled or not (the CSS variable)*/
+  background-image: linear-gradient(
+    #90c3fd,
+    #ba71ff,
+    #ff71b8
+  ); /*sets the color of the sidebar*/
+  transition: width 0.5s ease-in-out; /*Smooth animation when sidebar expands or collapses*/
+}
+/*The navigation menu*/
+nav {
+  height: 100%; /*Makes all the items within fill the entire sidebar height*/
+  /*border: 1px solid #000;*/
+}
+/*navigation menue unordered list*/
+nav ul {
+  list-style: none; /*removes bullet point*/
+  height: 100%; /*Makes all the items within fill the entire sidebar height (Same as above)*/
+  /*Stack items vertically*/
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem; /*Spacing between nav items*/
+}
+/*Pushes the last nav item in ul to the bottom*/
+nav li:last-child {
+  margin-top: auto;
+}
+/*The Icons with the names (items)*/
+nav a {
+  /*Allign icon and text vertically*/
+  display: flex;
+  align-items: center;
+  /**/
+  gap: 0.625rem; /*gap between icon and text*/
+  /*removes underline*/
+  padding: 0.625rem 0.875rem;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  /*hover animation*/
+  border-radius: 0.375rem;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+/*become active when you hover*/
+nav a.active,
+nav a:hover,
+nav a:focus-visible {
+  outline: none;
+  color: #b366fc;
+  background-color: #ffff;
+}
+/*make the text hidden when the sb is closed*/
+nav a span {
+  font-size: 0.875rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+/*make the text visible when sb is opened*/
+.sb-expanded nav a span {
+  opacity: 1;
+  visibility: visible;
+}
+/*when expanded, rotate the chevrons*/
+.sb-expanded aside .bx-chevrons-right {
+  rotate: 180deg;
+}
+/*to the actual page portion*/
+main {
+  margin-left: 5rem; /*prevents main content from overlapping the collapsed side bar*/
+  padding: 1rem 2rem; /*padding on [left and right] and [up and down] of the page(space from side bar to content on page and)*/
+  transition: margin-left 0.5s ease-in-out; /*Smooth movement when sidebar changes width*/
+}
+/*Depending on if the screen is 768px or wider, move the text on the page over */
+@media (min-width: 768px) {
+  main {
+    margin-left: var(--sb-width);
+  }
+}
+
+.image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.image-wrapper img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+/*Images*/
+img.ph1 {
+  width: 450px;
+  border-radius: 30px;
+}
+
+img.ph2 {
+  width: 350px;
+  border-radius: 30px;
+  margin-left: 10rem;
+}
+
+img.ph3 {
+  width: 277px;
+  border-radius: 30px;
+  margin-left: 28rem;
+}
+
+img.ph4 {
+  width: 300px;
+  border-radius: 30px;
+}
+
+img.ph5 {
+  width: 600px;
+  border-radius: 30px;
+  margin-left: 10rem;
+}
+
+img.ph6 {
+  width: 277px;
+  border-radius: 30px;
+  margin-left: 13rem;
+}

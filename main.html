@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--UTF-8 displays most characters correctly-->
+    <meta charset="UTF-8" />
+    <!--Makes the page responsive on different screen sizes-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Links External CSS library for icon fonts called BoxIcons-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!--Links local css file for styling-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!--sb-expanded used to style sidebar-->
+  <body>
+    <!--Sidebar section of page-->
+    <aside>
+      <!--Navigation menue inside sidebar-->
+      <nav>
+        <!--Unordered list to hold the navigation items-->
+        <ul>
+          <!--First navigation Item-->
+          <li>
+            <!--# is used as a placeholder (Fill it in with a link later)-->
+            <!--we put this in an active class that is later defined to mark it as the selected page if clicked-->
+            <a href="/HTML/LTC.website/main.html">
+              <!--Icon representing "Home"-->
+              <i class="bx bx-home-circle"></i>
+              <!--Text label for the link-->
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="/HTML/LTC.website/sb_imbedded/curriculum.html">
+              <i class="bx bxs-book bx-content"></i>
+              <span>Curriculum</span>
+            </a>
+          </li>
+          <li>
+            <a href="/HTML/LTC.website/sb_imbedded/projects.html">
+              <i class="bx bx-laptop"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="/HTML/LTC.website/sb_imbedded/start_learning.html">
+              <i class="bx bxl-c-plus-plus"></i>
+              <span>Start Learning</span>
+            </a>
+          </li>
+          <li>
+            <a href="/HTML/LTC.website/sb_imbedded/notifications.html">
+              <i class="bx bxs-bell bx-tada"></i>
+              <span>Notifications</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-resize-btn="">
+              <i class="bx bx-chevrons-right"></i>
+              <span>collapse</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <h1>Learn C++ for Beginners</h1>
+      <p>Build real University level programs like these</p>
+      <div class="image-wrapper">
+        <a href="/HTML/LTC.website/c++programs/Student_records/students.exe"
+          ><img src="/HTML/LTC.website/images/c++.jpg" class="ph1"
+        /></a>
+        <img src="/HTML/LTC.website/images/c++.jpg" class="ph2" />
+        <img src="/HTML/LTC.website/images/c++.jpg" class="ph3" />
+      </div>
+      <a href="/HTML/LTC.website/sb_imbedded/onboarding.html" class="CTA"
+        >START LEARNING</a
+      >
+    </main>
+    <!--Javascript-->
+    <script>
+      //document is the name of this page
+      //.queryselector("[data-resize-btn]") finds the first matching element (class) within the bracket like "[data-resize-btn]"
+      //Puts it all in resizeBtn variable
+      const resizeBtn = document.querySelector("[data-resize-btn]");
+      //Event listener that listens for a click
+      //function(e) runs when its clicked, e contains all the info about the click (what was clicked/what the default behaviour)
+      resizeBtn.addEventListener("click", function (e) {
+        //Preventing <a href='#'> from jumping to the top of page
+        e.preventDefault();
+        //if the class exists, remove it, if not add it (for the open and close feture for the side bar)
+        document.body.classList.toggle("sb-expanded");
+      });
+
+      //check what page we're on and make it active
+      //by removing all the other actives if the path doesnt match
+      const currentPath = window.location.pathname; //puts the path name in the currentPath variable
+      const allLinks = document.querySelectorAll("aside nav a"); //gets all the side bar links into a variable
+      //loop through the links
+      allLinks.forEach((link) => {
+        if (link.getAttribute("href") === currentPath) {
+          //if the href is the current path
+          link.classList.add("active"); //add the active class that style.css defines
+        } else {
+          link.classlist.remove("active"); //remove the active class
+        }
+      });
+    </script>
+  </body>
+</html>

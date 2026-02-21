@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--UTF-8 displays most characters correctly-->
+    <meta charset="UTF-8" />
+    <!--Makes the page responsive on different screen sizes-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Links External CSS library for icon fonts called BoxIcons-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!--Links local css file for styling-->
+    <link rel="stylesheet" href="/HTML/LTC.website/style.css" />
+
+    <style>
+      img.Thumbnail {
+        width: 500px;
+        height: auto;
+        border-radius: 20px;
+        transition: 0.5s ease-in-out;
+      }
+      img.Thumbnail:hover {
+        border-radius: 80px;
+        margin-top: -1rem;
+        width: 600px;
+        height: auto;
+      }
+      em {
+        font-weight: 200;
+      }
+    </style>
+  </head>
+  <!--sb-expanded used to style sidebar-->
+  <body>
+    <!--Sidebar section of page-->
+    <aside>
+      <!--Navigation menue inside sidebar-->
+      <nav>
+        <!--Unordered list to hold the navigation items-->
+        <ul>
+          <!--First navigation Item-->
+          <li>
+            <!--# is used as a placeholder (Fill it in with a link later)-->
+            <!--we put this in an active class that is later defined to mark it as the selected page if clicked-->
+            <a href="/HTML/LTC.website/main.html">
+              <!--Icon representing "Home"-->
+              <i class="bx bx-home-circle"></i>
+              <!--Text label for the link-->
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="/HTML/LTC.website/sb_imbedded/curriculum.html">
+              <i class="bx bxs-book bx-content"></i>
+              <span>Curriculum</span>
+            </a>
+          </li>
+          <li>
+            <a href="/HTML/LTC.website/sb_imbedded/projects.html">
+              <i class="bx bx-laptop"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="/HTML/LTC.website/sb_imbedded/start_learning.html">
+              <i class="bx bxl-c-plus-plus"></i>
+              <span>Start Learning</span>
+            </a>
+          </li>
+          <li>
+            <a href="/HTML/LTC.website/sb_imbedded/notifications.html">
+              <i class="bx bxs-bell bx-tada"></i>
+              <span>Notifications</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-resize-btn="">
+              <i class="bx bx-chevrons-right"></i>
+              <span>collapse</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <h1>Visual Studio Code</h1>
+      <h3 style="font-style: oblique; font-weight: 400; margin-left: 2rem">
+        What is it?...
+      </h3>
+      <p style="margin-left: 4rem">
+        It is a code editor made by microsoft that lets you write, edit and run
+        code in many programing languages.
+      </p>
+      <h3 style="font-style: oblique; font-weight: 400; margin-left: 2rem">
+        Why do we need it?...
+      </h3>
+      <p style="margin-left: 4rem">
+        In this course you are going to be creating various programs yourself
+        from your own computer and that reqires a code editor.
+      </p>
+      <h3 style="font-style: oblique; font-weight: 400; margin-left: 2rem">
+        How do we download it?...
+      </h3>
+      <p style="margin-left: 4rem">Watch this video:</p>
+      <p style="margin-left: 6rem">
+        <a
+          href="https://www.youtube.com/watch?v=DMWD7wfhgNY&t=200s"
+          target="_blank"
+          ><img
+            class="Thumbnail"
+            src="https://i.ytimg.com/vi/DMWD7wfhgNY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAtWa6RIkzZLL9HtzsoygcgpZ9GtQ"
+            alt="Video Thumbnail"
+        /></a>
+        p.s. after downloading, it would help to make a class file for this
+        course
+      </p>
+
+
+
+      <h1 style="margin-top: 2rem;">MSYS2</h1>
+      <h3 style="font-style: oblique; font-weight: 400; margin-left: 2rem">
+        What is it?...
+      </h3>
+      <p style="margin-left: 4rem">
+        ~A collection of Unix tools (bash,gcc,make,git, etc.) <br>
+        ~A package manager (pacman) to easily install compilers and libraries <br>
+        ~It is mainly used for C/C++ on windows <br>
+      </p>
+      <h3 style="font-style: oblique; font-weight: 400; margin-left: 2rem">
+        Why do we use it?...
+      </h3>
+      <p style="margin-left: 4rem">
+        ~Lets windows behave like linux/macos for programming <br>
+        ~Makes compiling with gcc/g++ and Makefiles simple <br>
+        ~Avoids messy manual setup of compilers <br>
+        ~Common in CS courses (especially C/C++) <br>
+
+      </p>
+      <h3 style="font-style: oblique; font-weight: 400; margin-left: 2rem">
+        How do we download it?...
+      </h3>
+      <p style="margin-left: 4rem">Watch this video:</p>
+      <p style="margin-left: 6rem">
+        <a href="https://www.youtube.com/watch?v=Gd5VnMMncbw">
+          <img 
+          class="Thumbnail"
+          src="https://i.ytimg.com/vi/Gd5VnMMncbw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCl58uHC_rY0qBMD1kTVulUqUhgeg" 
+          alt="Video Thumbnail">
+        </a>
+      </p>
+
+
+
+      <h3 style="font-style: oblique; font-weight: 400; margin-left: 2rem; margin-top: 8rem;">
+        Stucture your class file <em>(recommended)</em>:
+      </h3>
+      <p style="margin-left: 4rem">
+        [ class_file_name ]</class_file_name> <br />
+        -learning <br />
+        -----all the learning files here <br />
+        -practice <br />
+        -----all the practice files <br />
+        -projects <br />
+        -----all the projects
+      </p>
+      <h2 style="text-align: center;">ALL SET!!!</h2>
+      <div class="placeholder">
+        <div class="ph-1"></div>
+        <div class="ph-2"></div>
+        <div class="ph-3"></div>
+        <div class="ph-4"></div>
+        <div class="ph-5"></div>
+        <div class="ph-6"></div>
+        <div class="ph-7"></div>
+        <div class="ph-8"></div>
+        <div class="ph-9"></div>
+        <div class="ph-10"></div>
+      </div>
+    </main>
+    <!--Javascript-->
+    <script>
+      //document is the name of this page
+      //.queryselector("[data-resize-btn]") finds the first matching element (class) within the bracket like "[data-resize-btn]"
+      //Puts it all in resizeBtn variable
+      const resizeBtn = document.querySelector("[data-resize-btn]");
+      //Event listener that listens for a click
+      //function(e) runs when its clicked, e contains all the info about the click (what was clicked/what the default behaviour)
+      resizeBtn.addEventListener("click", function (e) {
+        //Preventing <a href='#'> from jumping to the top of page
+        e.preventDefault();
+        //if the class exists, remove it, if not add it (for the open and close feture for the side bar)
+        document.body.classList.toggle("sb-expanded");
+      });
+
+      //check what page we're on and make it active
+      //by removing all the other actives if the path doesnt match
+      const currentPath = window.location.pathname; //puts the path name in the currentPath variable
+      const allLinks = document.querySelectorAll("aside nav a"); //gets all the side bar links into a variable
+      //loop through the links
+      allLinks.forEach((link) => {
+        if (link.getAttribute("href") === currentPath) {
+          //if the href is the current path
+          link.classList.add("active"); //add the active class that style.css defines
+        } else {
+          link.classList.remove("active"); //remove the active class
+        }
+      });
+    </script>
+  </body>
+</html>

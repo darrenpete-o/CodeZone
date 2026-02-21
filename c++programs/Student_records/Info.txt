@@ -1,0 +1,8 @@
+1001                Gary                DeSnake             11                  reptile             
+0                   James               Harden              34                  male                
+3344                Adam                Dune                18                  male                
+1933                Anthony             Mendoza             20                  female              
+9099                Charlotte           Ogboh               21                  female              
+9999                Logan               Paul                34                  male                
+8888                Jake                Paul                32                  male                
+6767                Darren              Ogboh               19                  male                
