@@ -15,8 +15,17 @@ body {
   font-size: 16px;
   line-height: 1.7;
   /*Font color and background color*/
-  color: black;
-  background-color: #f3ece4;
+  color: white;
+  background-color: transparent;
+}
+.bgvideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 /*increases the width when toggled in the body*/
 body.sb-expanded {
@@ -61,9 +70,9 @@ aside {
     --sb-width
   ); /*The width depends on if its toggled or not (the CSS variable)*/
   background-image: linear-gradient(
-    #90c3fd,
-    #ba71ff,
-    #ff71b8
+    #000000,
+    #373737,
+    #989898
   ); /*sets the color of the sidebar*/
   transition: width 0.5s ease-in-out; /*Smooth animation when sidebar expands or collapses*/
 }
