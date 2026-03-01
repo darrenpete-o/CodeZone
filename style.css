@@ -16,7 +16,7 @@ body {
   line-height: 1.7;
   /*Font color and background color*/
   color: white;
-  background-color: transparent;
+  background-color: black;
 }
 .bgvideo {
   position: fixed;
